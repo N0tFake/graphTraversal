@@ -1,0 +1,3 @@
+Tamanho do grafo: 100 --- Tempo de Execulção: 0.002476215362548828
+Tamanho do grafo: 1000 --- Tempo de Execulção: 0.20706677436828613
+Quebrou com tamanho 10000

@@ -1,19 +1,11 @@
 import networkx as nx 
-import os
-
 import matplotlib.pyplot as plt
-
 
 number = 10
 
 numberNodes = numberEdges = number
 
 G = nx.gnm_random_graph(numberNodes, numberEdges)
-
-Gr = nx.gn_graph(5)
-
-nx.draw(Gr, with_labels=True)
-plt.show()
 
 listNodes = list(G.nodes())
 listEdges = list(G.edges())

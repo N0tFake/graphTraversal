@@ -2,7 +2,14 @@ from Models.Graph import Graph
 from utils.graphFile import readGraphFile
 from algoritmos.DepthFirstSearch import DFS
 from algoritmos.BreadthFirstSearch import BFS
-from time import time
+from time import time, sleep
+
+import sys
+
+import networkx as nx 
+import matplotlib.pyplot as plt
+
+BREAK = False
 
 def graphTraverse(G, type):
     for node in G.nodes:
@@ -24,18 +31,19 @@ def graphTraverse(G, type):
 
 if __name__ == '__main__':
 
-    output = readGraphFile(10)
+    sys.setrecursionlimit(1500)
+
+    graph = readGraphFile(10)
 
     G = Graph()
-    G.generated(nodes=output[0], edges=output[1])
-
-    print('grafo criado: \n', G.nodes, '\n')
-    print(G.edges, '\n\n')
+    G.generated(nodes=graph[0], edges=graph[1])
 
     output = graphTraverse(G, type='BFS')
 
-    print('DFS rodado: \n', G.nodes)
-    print(output)
+    print('\033[91m------------------- Saida -------------------\033[0m')
+    print(f'Resultado em vertices: {output[0]}')
+
+    
 
 
 
